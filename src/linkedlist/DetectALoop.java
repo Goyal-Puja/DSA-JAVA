@@ -1,5 +1,7 @@
 package linkedlist;
 
+import javax.swing.*;
+
 public class DetectALoop {
     public static boolean hasCycle(ListNode head){
         if(head == null || head.next == null)
@@ -17,6 +19,26 @@ public class DetectALoop {
             }
         }
         return false;
+    }
+
+    public static void startingPoint(ListNode head){
+        ListNode slow = head;
+        ListNode fast = head;
+
+        while(fast.next != null && fast.next.next != null){
+            slow = slow.next;
+            fast = fast.next.next;
+
+            if(slow == fast){
+                slow = head;
+                while(slow != fast){
+                    slow = slow.next;
+                    fast = fast.next;
+                }
+                System.out.println(slow.val);
+            }
+        }
+        System.out.println("null");
     }
 
     public static void main(String[] args){
@@ -38,5 +60,6 @@ public class DetectALoop {
         } else {
             System.out.println("No loop detected in the linked list");
         }
+        loop.startingPoint(node1);
     }
 }
