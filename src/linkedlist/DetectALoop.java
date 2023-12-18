@@ -21,7 +21,7 @@ public class DetectALoop {
         return false;
     }
 
-    public static void startingPoint(ListNode head){
+    public static ListNode startingPoint(ListNode head){
         ListNode slow = head;
         ListNode fast = head;
 
@@ -35,10 +35,30 @@ public class DetectALoop {
                     slow = slow.next;
                     fast = fast.next;
                 }
-                System.out.println(slow.val);
+                return slow;
             }
         }
-        System.out.println("null");
+        return null;
+    }
+    public static int lengthOfLoop(ListNode head){
+        ListNode slow = head;
+        ListNode fast = head;
+
+        while(fast.next != null && fast.next.next != null){
+            slow = slow.next;
+            fast = fast.next.next;
+
+            if(slow == fast){
+                int count = 1;
+                slow = slow.next;
+                while(slow != fast){
+                    count++;
+                    slow = slow.next;
+                }
+                return count;
+            }
+        }
+        return 0;
     }
 
     public static void main(String[] args){
@@ -60,6 +80,7 @@ public class DetectALoop {
         } else {
             System.out.println("No loop detected in the linked list");
         }
-        loop.startingPoint(node1);
+        System.out.println("The starting point of the loop : "+ loop.startingPoint(node1));
+        System.out.println("The length of loop : "+ loop.lengthOfLoop(node1));
     }
 }
