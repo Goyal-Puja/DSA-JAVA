@@ -1,6 +1,6 @@
 package linkedlist;
 
-public class SortList {
+public class sort012 {
     public static ListNode sort0s1s2s(ListNode head){
         ListNode curr = head;
         int count0 = 0;
@@ -50,7 +50,7 @@ public class SortList {
         head.next.next.next.next = new ListNode(0);
         head.next.next.next.next.next = new ListNode(0);
 
-        SortList list = new SortList();
+        sort012 list = new sort012();
         ListNode result = list.sort0s1s2s(head);
         list.print(result);
     }
