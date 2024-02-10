@@ -1,9 +1,6 @@
 package tree;
 
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.Map;
-import java.util.Queue;
+import java.util.*;
 
 public class VerticalSumOfBT {
     static class Pair{
@@ -19,7 +16,7 @@ public class VerticalSumOfBT {
         if(root == null)
             return;
 
-        Map<Integer,Integer> verticalSumMap = new HashMap<>();
+        TreeMap<Integer,Integer> verticalSumMap = new TreeMap<>();
         Queue<Pair> queue = new LinkedList<>();
         queue.offer(new Pair(root,0));
 

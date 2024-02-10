@@ -1,14 +1,11 @@
 package stackandqueue;
 
 public class StackUsingLinkedList {
-
     private class Node{
         int data;
         Node link;
     }
-
     Node top;
-
     public StackUsingLinkedList(){
         this.top = null;
     }
@@ -30,7 +27,6 @@ public class StackUsingLinkedList {
     public void POP(){
         if(top == null){
             System.out.println("UnderFlow");
-
         }
         top = top.link;
     }
@@ -48,7 +44,6 @@ public class StackUsingLinkedList {
             }
         }
     }
-
     public static void main(String[] args){
         StackUsingLinkedList st = new StackUsingLinkedList();
         st.PUSH(1);
@@ -58,6 +53,5 @@ public class StackUsingLinkedList {
         System.out.println();
         st.POP();
         st.display();
-
     }
 }

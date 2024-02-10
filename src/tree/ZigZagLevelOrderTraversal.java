@@ -52,5 +52,5 @@ public class ZigZagLevelOrderTraversal {
 //                 3                         [3]
 //             /      \
 //            9       20                    [20,9]
-//           /       /  \
+//                   /  \
 //                 15    7                  [15,7]

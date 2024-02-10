@@ -19,6 +19,7 @@ public class BFSTraversal {
     }
     void insertEdge(int src,int dest){
         adj[src].add(dest);
+        adj[dest].add(src);
     }
     void BFS(int src){
         int a = 0;

@@ -40,7 +40,7 @@ public class SnakeAndLadderGame {  // manages the overall game
             System.out.println("Congratulation "+currentPlayer.getName()+ " Wins !!");
             System.exit(0);
         }
-        currentPlayerIndex = (currentPlayerIndex+1) % players.length; 
+        currentPlayerIndex = (currentPlayerIndex+1) % players.length;
     }
 
     public void playGame(){   // continues the game until a player wins

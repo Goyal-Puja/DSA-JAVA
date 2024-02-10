@@ -15,13 +15,14 @@ public class Palindrome {
                 i++;
                 j--;
             }
-            else{
-
-                System.out.println("Not Palindrome");
+            else {
                 break;
             }
-
-           System.out.println("Palindrome");
+        }
+        if( i >= j){
+            System.out.println("PALINDROME");
+        } else {
+            System.out.println("NOT PALINDROME");
         }
 
     }

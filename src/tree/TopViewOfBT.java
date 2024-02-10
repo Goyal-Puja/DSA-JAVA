@@ -55,6 +55,5 @@ public class TopViewOfBT {
         root.right.right = new TreeNode(25);
 
         TopViewOfBT.topViewOfBT(root);
-
     }
 }

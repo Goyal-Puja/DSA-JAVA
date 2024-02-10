@@ -18,6 +18,7 @@ public class DFSTraversal {
     }
     void insertEdge(int src,int dest){
         adj[src].add(dest);
+        adj[dest].add(src);
     }
 
     void DFS(int src){

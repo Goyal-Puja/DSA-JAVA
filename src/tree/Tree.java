@@ -113,25 +113,6 @@ public class Tree {
         return ans;
     }
 
-//    public Tree merge(Tree t1,Tree t2){
-//        if(t1 == null && t2 == null){
-//            return t1;
-//        }
-//        if(t1 == null && t2 != null){
-//            return t2;
-//        }
-//        if(t1 != null && t2 == null){
-//            return t1;
-//        }
-//        else{
-//            t1.value += t2.value;
-//            System.out.print(t1.value+" ");
-//            t1.left = merge(t1.left,t2.left);
-//            t1.right = merge(t1.right,t2.right);
-//        }
-//        return t1;
-//    }
-
     public static void main(String[] args){
         TreeNode root = new TreeNode(4);
         Tree tree = new Tree();

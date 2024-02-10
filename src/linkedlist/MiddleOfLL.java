@@ -15,7 +15,7 @@ public class MiddleOfLL {
         head.next = new ListNode(2);
         head.next.next = new ListNode(3);
         head.next.next.next = new ListNode(4);
-       // head.next.next.next.next = new ListNode(5);
+        head.next.next.next.next = new ListNode(5);
 
         MiddleOfLL middleOfLL = new MiddleOfLL();
         System.out.println("The middle Node of Linked List is "+ middleOfLL.middlePoint(head));
