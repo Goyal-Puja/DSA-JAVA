@@ -14,7 +14,6 @@ public class ReverseASentence {
                 ReverseStr.insert(0,arr[i]);
                 if(i < arr.length-1)
                     ReverseStr.insert(0," ");
-
             }
         }
         System.out.print(ReverseStr);

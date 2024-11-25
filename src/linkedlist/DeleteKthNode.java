@@ -1,24 +1,23 @@
 package linkedlist;
 
 public class DeleteKthNode {
-
     public static ListNode removeKthNode(ListNode head,int k){
         ListNode temp = head;
         int count = 0;
-        while(temp.next != null){
+        while(temp != null){
             count++;
             temp = temp.next;
         }
 
         int index = count-k;
         temp = head;
-        while(index > 0){
+        for(int i=0;i<index-1;i++){
             temp = temp.next;
-            index--;
         }
         temp.next = temp.next.next;
         return head;
     }
+
     public static void print(ListNode head){
         ListNode curr = head;
         while(curr != null){

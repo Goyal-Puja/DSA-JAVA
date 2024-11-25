@@ -1,3 +1,7 @@
+// we create a class that extends the Thread class. This class overrides the run method available in the thread class
+// The thread begins its life inside run() method. we create an object of our new class and call the start() method
+// to start the execution of the thread.
+
 package multithreading;
 
 public class MultiThreadingExample{

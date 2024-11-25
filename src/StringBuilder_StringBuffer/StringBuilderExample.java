@@ -28,7 +28,7 @@ public class StringBuilderExample {
             ex.printStackTrace();
         }
       //  System.out.print(sb.toString());
-        System.out.println(stringBuilder.toString().length());
+        System.out.println(stringBuffer.toString().length());
         System.out.println(stringBuffer.toString().length());
     }
 }

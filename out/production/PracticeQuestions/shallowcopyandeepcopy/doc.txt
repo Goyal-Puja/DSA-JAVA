@@ -1,0 +1,24 @@
+To copy the object's data we have several method like deep copy and shallow copy
+
+class Rectangle {
+int length = 5;
+int breadth = 3;
+}
+
+object of Rectangle class : Rectangle obj1 = new Rectangle();
+
+--shallow copy : The shallow copy one creates a new reference and points to the same
+object
+
+Rectangle obj2 = obj1;
+
+new reference is created with name obj2 and that will point to the same memory location
+
+--Deep copy : In a deep copy, we create a new object and copy the old object value
+to the new object
+
+Rectangle obj3 = new Rectangle();
+obj3.length = obj1.length
+obj3.breadth = obj1.breadth
+
+if we change the values in shallow copy then they affect the other reference as well.

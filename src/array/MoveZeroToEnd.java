@@ -5,20 +5,19 @@ public class MoveZeroToEnd {
         int[] arr = {1, 2, 0, 3, 2, 4, 0, 9};
         int n = arr.length;
         int k = 0;
-        int[] newArr = new int[n];
 
         for(int i=0;i<n;i++){
             if(arr[i] != 0){
-                newArr[k++] = arr[i];
+                arr[k++] = arr[i];
             }
         }
 
         while(k < n){
-            newArr[k++] = 0;
+            arr[k++] = 0;
         }
 
         for(int i=0;i<n;i++){
-            System.out.print(newArr[i]+" ");
+            System.out.print(arr[i]+" ");
         }
     }
 }

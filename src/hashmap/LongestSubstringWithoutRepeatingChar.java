@@ -23,3 +23,6 @@ public class LongestSubstringWithoutRepeatingChar {
         System.out.println(pre);
     }
 }
+///abcdabcde
+
+

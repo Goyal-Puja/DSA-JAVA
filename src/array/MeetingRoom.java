@@ -3,6 +3,8 @@ package array;
 import java.util.Arrays;
 import java.util.Comparator;
 
+import static java.util.Comparator.comparingInt;
+
 class MeetingRoom {
     static class Meeting{
         int start;
@@ -10,16 +12,6 @@ class MeetingRoom {
         Meeting(int start,int end){
             this.start = start;
             this.end = end;
-        }
-    }
-    static class comp implements Comparator<Meeting>{
-        public int compare(Meeting m1, Meeting m2){
-            if(m1.end >= m2.end)
-                return 1;
-            else if(m1.end < m2.end)
-                return -1;
-            else
-                return 0;
         }
     }
     public static int maxMeetings(int start[],int end[],int n){
@@ -30,7 +22,18 @@ class MeetingRoom {
         for(int i=0;i<n;i++){
             meetings[i] = new Meeting(start[i],end[i]);
         }
-        Arrays.sort(meetings, new comp());
+//      //  Arrays.sort(meetings, new Comparator<Meeting>((a, b) -> comparingInt(b)) {
+//            @Override
+//            public int compare(Meeting o1, Meeting o2) {
+//                return 0;
+//            }
+//
+//            @Override
+//            public boolean equals(Object obj) {
+//                return false;
+//            }
+//        });
+
         int ans = 1;
         int prev = meetings[0].end;
         for(int i=1;i<n;i++){
