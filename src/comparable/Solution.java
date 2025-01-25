@@ -33,9 +33,9 @@ public class Solution {
             System.out.println(p.getId() + "--->" + p.getName());
         }
 
-        Collections.sort(personList, new NameComparator());     // multiple sorting sequence
-        for (Person p : personList){
-            System.out.println(p.getId()+"-->"+p.getName());
-        }
+//        Collections.sort(personList, new NameComparator());     // multiple sorting sequence
+//        for (Person p : personList){
+//            System.out.println(p.getId()+"-->"+p.getName());
+//        }
     }
 }

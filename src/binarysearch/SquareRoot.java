@@ -11,7 +11,7 @@ public class SquareRoot {
            return 1;
 
         int start = 1;
-        int end = A-1;
+        int end = A;
         int mid;
         int res = 0;
 
