@@ -1,7 +1,6 @@
 package regular_expressions;
 
 public class ValidatePhoneNumberClass {
-
     boolean validatePhoneNo(String mobileNumber){
         boolean valid = true;
         int length = mobileNumber.length();
