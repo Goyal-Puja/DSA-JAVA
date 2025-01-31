@@ -68,7 +68,7 @@ public class EmployeeSortingUsingStreamAPI {
 
         //using lambda expression ( in descending order )
         List<Employee> employeeList = getEmployees().stream().sorted((Employee o1, Employee o2)
-                -> o2.getSalary() - o1.getSalary()).collect(Collectors.toList());
+                -> o2.getSalary() - o1.getSalary()).collect(Collectors.toList());  // collect method is basically used to create a separate list to store
         System.out.println(employeeList);
 
         // ascending order
@@ -78,7 +78,6 @@ public class EmployeeSortingUsingStreamAPI {
         //descending order
         List<Employee> employeeDescList = getEmployees().stream().sorted((Comparator.comparingLong(Employee::getSalary).reversed())).collect(Collectors.toList());
         System.out.println(employeeDescList);
-
 
         // sort employee by their age using stream api ( in ascending order )
         List<Employee> sortedEmployeeByAge = getEmployees().stream().sorted((Employee o1, Employee o2) -> o1.getAge() - o2.getAge()).collect(Collectors.toList());
