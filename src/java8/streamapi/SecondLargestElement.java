@@ -7,7 +7,7 @@ import java.util.stream.Stream;
 public class SecondLargestElement {
     // to find the second-largest element in a stream using stream api
     public static void main(String[] args){
-        Stream stream = Stream.of(1, 2, 3, 4, 5, 6, 7, 8, 9);
+        Stream stream = Stream.of( 63, 72, 84, 92, 21, 32, 42, 15);
 
         Optional<Integer> secondLargest = stream.sorted(Comparator.reverseOrder())
                 .skip(1)
