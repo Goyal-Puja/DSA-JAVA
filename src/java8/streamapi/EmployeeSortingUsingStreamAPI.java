@@ -1,7 +1,5 @@
 package java8.streamapi;
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
+import java.util.*;
 import java.util.stream.Collectors;
 
 class Employee {
@@ -90,6 +88,39 @@ public class EmployeeSortingUsingStreamAPI {
                 return o1.getAge() - o2.getAge();
             }
         });
+
+
+        // employee with minimum salary
+        Optional<Employee> minSalaryEmployee = getEmployees().stream()
+                .min(Comparator.comparingInt(emp -> emp.getSalary()));
+        minSalaryEmployee.ifPresent(employee ->
+                System.out.println("Employee with the lowest salary" + employee.getName() + " with salary "+ employee.getSalary())
+        );
+
+        // increase the employee salary with the incremented amount
+        int incrementSalary = 1000;
+        List<Employee> employeesWithIncrementedSalary = getEmployees().stream().peek(employee -> employee.setSalary(employee.getSalary() + incrementSalary)).collect(Collectors.toList());
+
+        // create a map where employee names are the keys and salaries are the values
+        Map<String, Integer> nameSalaryMap = getEmployees().stream()
+                .collect(Collectors.toMap(employee -> employee.getName() , employee -> employee.getSalary()));
+
+        System.out.println(nameSalaryMap);
+
+        // combine all employee names into a single string
+        String combinedNames = getEmployees().stream()
+                .map(emp -> emp.getName())
+                .collect(Collectors.joining(", "));
+
+        System.out.println(combinedNames);
+
+        // to find the employee whose name start with specific letter
+        char startingLetter = 'A';
+        List<String> filteredEmployees = getEmployees().stream()
+                .filter(employee -> employee.getName().startsWith(String.valueOf(startingLetter)))
+                .map(employee -> employee.getName())
+                .collect(Collectors.toList());
+
     }
 
     private static List<Employee> getEmployees(){
